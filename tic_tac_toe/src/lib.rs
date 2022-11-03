@@ -94,7 +94,7 @@ pub fn tic_tac_toe(
                 msg!("Player 1: {:?}", game_data.player1);
                 msg!("Player 2: {:?}", game_data.player2);
 
-                // Verify and updting moves in Game Account
+                // Verify and updating moves in Game Account
                 if (game_data.moves[move_positon] == 0) && (game_data.next_move == played_by) {
                     if game_data.next_move == 1 {
                         game_data.moves[move_positon] = 1;
@@ -106,29 +106,6 @@ pub fn tic_tac_toe(
                 } else {
                     msg!(" Wrong Move");
                 }
-
-                // Log the update moves
-                msg!("Game Moves");
-                msg!(" ______ ");
-                msg!(
-                    "| {} {} {} |",
-                    game_data.moves[0],
-                    game_data.moves[1],
-                    game_data.moves[2],
-                );
-                msg!(
-                    "| {} {} {} |",
-                    game_data.moves[3],
-                    game_data.moves[4],
-                    game_data.moves[5],
-                );
-                msg!(
-                    "| {} {} {} |",
-                    game_data.moves[6],
-                    game_data.moves[7],
-                    game_data.moves[8]
-                );
-                msg!("|______|");
 
                 let game_status = win_check(game_data.moves);
 
